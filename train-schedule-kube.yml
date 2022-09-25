@@ -24,15 +24,9 @@ spec:
   selector:
     matchLabels:
       app: train-schedule
-      track: stable
-  template:
-    metadata:
-      labels:
-        app: train-schedule
-        track: stable
     spec:
       containers:
-      - name: train-schedule
+      - name: megha-train-schedule
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         ports:
         - containerPort: 8080
